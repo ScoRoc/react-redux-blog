@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Form from './Form';
+import List from './List';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+
+// because we are using Redux, many of our components
+// can be written as functional or "stateless" components
+const App = () => (
+  <div>
+    <div>
+      <h2>Add a new Article: </h2>
+      <Form />
+    </div>
+    <div>
+      <h2>Articles: </h2>
+      <List />
+    </div>
+  </div>
+);
 
 export default App;
